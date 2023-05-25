@@ -11,7 +11,7 @@ const TodoItem = (props) => {
         />
         {props.data.title}
       </label>
-      <button>Delete</button>
+      <button onClick={() => props.deleteTodo(props.data.id)}>Delete</button>
     </li>
   );
 };
