@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
 const TodoItem = () => {
   return (
-    <div>TodoItem</div>
-  )
-}
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" />
+          Item 1
+        </label>
+        <button>Delete</button>
+      </li>
+    </ul>
+  );
+};
 
-export default TodoItem
+export default TodoItem;

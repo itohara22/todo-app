@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NewTodoForm = () => {
+  const [newTask, setNewTask] = useState("");
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    setNewTask("");
+  };
+  const inputChangeHandler = (e) => {
+    setNewTask(e.target.value);
+  };
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="form_row">
         <label>New Task</label>
-        <input type="text" id="new_task" />
+        <input
+          type="text"
+          id="new_task"
+          onChange={inputChangeHandler}
+          value={newTask}
+        />
       </div>
       <button type="submit">Add</button>
     </form>
