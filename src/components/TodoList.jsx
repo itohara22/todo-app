@@ -8,7 +8,9 @@ const TodoList = (props) => {
       <h2>List</h2>
       <ul>
         {props.data.map((todo) => {
-          return <TodoItem title={todo} />;
+          return (
+            <TodoItem data={todo} key={todo.id} toggleTodo={props.toggleTodo} />
+          );
         })}
       </ul>
     </>
