@@ -5,8 +5,9 @@ const NewTodoForm = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    setNewTask("");
+    if (newTask === "") return;
     props.onSubmitTodo(newTask);
+    setNewTask("");
   };
 
   const inputChangeHandler = (e) => {
@@ -16,7 +17,7 @@ const NewTodoForm = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <div className="form_row">
-        <label>New Task</label>
+        <label htmlFor="new_task">New Task</label>
         <input
           type="text"
           id="new_task"

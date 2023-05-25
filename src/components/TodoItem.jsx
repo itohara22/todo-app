@@ -1,16 +1,14 @@
 import React from "react";
 
-const TodoItem = () => {
+const TodoItem = (props) => {
   return (
-    <ul>
-      <li>
-        <label>
-          <input type="checkbox" />
-          Item 1
-        </label>
-        <button>Delete</button>
-      </li>
-    </ul>
+    <li>
+      <label>
+        <input type="checkbox" />
+        {props.title}
+      </label>
+      <button>Delete</button>
+    </li>
   );
 };
 
