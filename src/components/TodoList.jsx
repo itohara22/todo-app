@@ -2,18 +2,21 @@ import React from "react";
 
 import TodoItem from "./TodoItem";
 
-const TodoList = (props) => {
+const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
+  console.log(todos);
   return (
     <>
       <h2>List</h2>
       <ul>
-        {props.data.map((todo) => {
+        {todos.map((todo) => {
           return (
             <TodoItem
-              data={todo}
+              title={todo.title}
+              id={todo.id}
+              completed={todo.completed}
               key={todo.id}
-              toggleTodo={props.toggleTodo}
-              deleteTodo={props.deleteTodo}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
             />
           );
         })}
