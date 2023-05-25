@@ -25,7 +25,9 @@ const NewTodoForm = (props) => {
           value={newTask}
         />
       </div>
-      <button type="submit">Add</button>
+      <button type="submit" className="form_btn">
+        Add
+      </button>
     </form>
   );
 };

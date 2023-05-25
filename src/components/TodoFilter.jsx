@@ -6,7 +6,7 @@ const TodoFilter = (props) => {
     props.filterChange(e.target.value);
   };
   return (
-    <div>
+    <div className="todo_filter">
       <label>Filter</label>
       <select onChange={filterChangeHandler}>
         <option value="all">All</option>

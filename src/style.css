@@ -4,15 +4,17 @@
 }
 
 body {
-  background-color: rgb(58, 58, 58);
+  background-color: #3a3a3a;
   display: grid;
   place-items: center;
 }
 ul {
   list-style: none;
 }
-h1 {
+h1,
+h2 {
   text-align: center;
+  color: #ffe4c4;
 }
 
 form {
@@ -25,4 +27,73 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.form_row label {
+  font-weight: bold;
+  color: bisque;
+}
+.form_row input {
+  padding: 0.3rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.form_btn {
+  padding: 0.3rem 0.5rem;
+  width: 150px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 7px;
+  color: #3a3a3a;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ffa8a8;
+  transition: all 100ms ease-in-out;
+}
+
+.form_btn:hover {
+  cursor: pointer;
+  background-color: #ff8e8e;
+}
+.todo_filter {
+  margin-top: 1rem;
+}
+
+.todo_filter label {
+  color: bisque;
+  font-weight: bold;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.todo_filter select {
+  color: #3a3a3a;
+  font: inherit;
+  padding: 0.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.todo_itm {
+  margin: 0.7rem;
+}
+.todo_itm label {
+  padding: 10px;
+  color: bisque;
+}
+
+.del_btn {
+  padding: 0.3rem 0.6rem;
+  border: #ff8e8e solid 2px;
+  background-color: #3a3a3a;
+  color: #ffe4c4;
+  border-radius: 7px;
+  transition: all 100ms ease-out;
+}
+
+.del_btn:hover {
+  color: #3a3a3a;
+  background-color: #ff8e8e;
+  font-weight: bolder;
+  cursor: pointer;
 }
