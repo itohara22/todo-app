@@ -4,10 +4,14 @@ import TodoList from "./components/TodoList";
 import "./style.css";
 
 const App = () => {
+  const newTodo = (item) => {
+    console.log(item);
+  };
+
   return (
     <>
       <h1>Todo</h1>
-      <NewTodoForm />
+      <NewTodoForm onSubmitTodo={newTodo} />
       <TodoList />
     </>
   );
