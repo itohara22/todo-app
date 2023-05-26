@@ -3,7 +3,6 @@ import React from "react";
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ todos, toggleTodo, deleteTodo }) => {
-  console.log(todos);
   return (
     <>
       <h2>List</h2>
